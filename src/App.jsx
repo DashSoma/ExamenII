@@ -5,13 +5,13 @@ import viteLogo from '/vite.svg'
 import Tasks from './components/Tasks'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.min.js"
+import List from './components/List'
 
 
 function App() {
   return (
     <>
       <Tasks></Tasks>
-      
     </>
   )
 
