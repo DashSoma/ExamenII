@@ -7,12 +7,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import List from "./components/List";
 import Progress from "./components/Progress";
+import Button from "./components/Button";
 
 function App() {
   return (
     <>
       <Tasks></Tasks>
       <Progress></Progress>
+      <Button></Button>
     </>
   );
 }

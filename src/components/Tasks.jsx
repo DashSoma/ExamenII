@@ -1,93 +1,112 @@
-import TaskLayout from "./TaskLayout";
-import Label from "./Label";
+import TaskInput from "./TaskInput";
+
 
 function Tasks() {
   return (
     <>
-      <form className="row g-3">
-        <div className="col-md-6">
-          <label htmlFor="inputNamel14" className="form-label">
-            Nombre
-          </label>
-          <TaskLayout
+      <>
+        <div className="input-group mb-3">
+          <span className="input-group-text" id="basic-addon1">
+            @
+          </span>
+          <input
             type="text"
             className="form-control"
-            id="inputName4"
-            placeholder="Nombre"
-          ></TaskLayout>
-        </div>
-        <div className="col-md-6">
-          <label htmlFor="inputPassword4" className="form-label">
-            Password
-          </label>
-          <TaskLayout
-            type="password"
-            className="form-control"
-            id="inputPassword4"
-            placeholder="Contraseña"
-          ></TaskLayout>
-        </div>
-        <div className="col-12">
-          <label htmlFor="inputAddress" className="form-label">
-            Descripcion
-          </label>
-          <TaskLayout
+            placeholder="Username"
+            aria-label="Username"
+            aria-describedby="basic-addon1"
+          />
+          <TaskInput>
             type="text"
             className="form-control"
-            id="inputAddress4"
-            placeholder="Labor por hacer"
-          ></TaskLayout>
+            placeholder="Username"
+            aria-label="Username"
+            aria-describedby="basic-addon1"
+            </TaskInput>
         </div>
-        <div className="col-12">
-          <label htmlFor="inputAddress2" className="form-label">
-            Materia
-          </label>
-          <TaskLayout
+        <div className="input-group mb-3">
+          <input
             type="text"
             className="form-control"
-            id="inputAddress2"
-            placeholder="Materia"
-          ></TaskLayout>
+            placeholder="Recipient's username"
+            aria-label="Recipient's username"
+            aria-describedby="basic-addon2"
+          />
+          <span className="input-group-text" id="basic-addon2">
+            @example.com
+          </span>
         </div>
-        <div className="col-md-6">
-          <label htmlFor="inputCity" className="form-label">
-            City
+        <div className="mb-3">
+          <label htmlFor="basic-url" className="form-label">
+            Your vanity URL
           </label>
-          <input type="text" className="form-control" id="inputCity" />
-        </div>
-        <div className="col-md-4">
-          <label htmlFor="inputState" className="form-label">
-            State
-          </label>
-          <select id="inputState" className="form-select">
-            <option selected="">Choose...</option>
-            <option>...</option>
-          </select>
-        </div>
-        <div className="col-md-2">
-          <label htmlFor="inputZip" className="form-label">
-            Zip
-          </label>
-          <input type="text" className="form-control" id="inputZip" />
-        </div>
-        <div className="col-12">
-          <div className="form-check">
+          <div className="input-group">
+            <span className="input-group-text" id="basic-addon3">
+              https://example.com/users/
+            </span>
             <input
-              className="form-check-input"
-              type="checkbox"
-              id="gridCheck"
+              type="text"
+              className="form-control"
+              id="basic-url"
+              aria-describedby="basic-addon3 basic-addon4"
             />
-            <label className="form-check-label" htmlFor="gridCheck">
-              Check me out
-            </label>
+          </div>
+          <div className="form-text" id="basic-addon4">
+            Example help text goes outside the input group.
           </div>
         </div>
-        <div className="col-12">
-          <button type="submit" className="btn btn-primary">
-            Sign in
-          </button>
+        <div className="input-group mb-3">
+          <span className="input-group-text">$</span>
+          <input
+            type="text"
+            className="form-control"
+            aria-label="Amount (to the nearest dollar)"
+          />
+          <span className="input-group-text">.00</span>
         </div>
-      </form>
+        <div className="input-group mb-3">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Username"
+            aria-label="Username"
+          />
+          <span className="input-group-text">@</span>
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Server"
+            aria-label="Server"
+          />
+        </div>
+        <div className="input-group">
+          <span className="input-group-text">With textarea</span>
+          <textarea
+            className="form-control"
+            aria-label="With textarea"
+            defaultValue={""}
+          />
+          
+          <button
+          type="button"
+          className="btn btn-outline-success m-2"
+          onClick={() => {
+            alert("Se presionó el botón. Se va a mostrar la imagen.");
+            onMostrar();
+          }}
+        >
+          Agregar 
+        </button>
+  
+        <button
+          type="button"
+          className="btn btn-outline-danger m-2"
+          onClick={offEliminar}
+        >
+          Eliminar
+        </button>
+        </div>
+      </>
     </>
   );
 }
