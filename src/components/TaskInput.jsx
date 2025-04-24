@@ -1,4 +1,4 @@
-function Pe({}) {
+const TaskInput =()=> {
     return (
       <>
 <input
@@ -8,8 +8,8 @@ function Pe({}) {
             aria-label="Username"
             aria-describedby="basic-addon1"
           />
-<>
+          </>
 );
 }
 
-export default Pe;
+export default TaskInput;

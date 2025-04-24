@@ -1,3 +1,5 @@
+import TaskInput from "./TaskInput";
+
 function Tasks() {
   return (
     <>
@@ -13,6 +15,13 @@ function Tasks() {
             aria-label="Username"
             aria-describedby="basic-addon1"
           />
+          <TaskInput>
+            type="text"
+            className="form-control"
+            placeholder="Username"
+            aria-label="Username"
+            aria-describedby="basic-addon1"
+            </TaskInput>
         </div>
         <div className="input-group mb-3">
           <input
